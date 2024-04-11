@@ -41,7 +41,7 @@
         event.preventDefault();
         console.log("form in ");
 
-        document.getElementById('updateform').action = '/upd/' + id;
+        document.getElementById('updateform').action = '/update/' + id;
 
         document.getElementById('updateform').submit();
     });

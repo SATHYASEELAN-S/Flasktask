@@ -60,22 +60,7 @@ def delete(id):
     except:
         return "error"
 
-@app.route("/upd/<int:id>",methods=['post'])
-def up(id):
-    print("up in")
-    emp=Employee.query.get_or_404(id)
-    if request.method=='POST':
-        print("emp",emp)
-        emp.name=request.form["name"]
-        emp.age=request.form["age"]
-        emp.gender=request.form["gender"]
-        emp.Designation=request.form["designation"]
 
-        try:
-            db.session.commit()
-            return redirect("/")
-        except:
-            return "update Failed"
     
     
 
@@ -91,7 +76,18 @@ def update(id):
         'gender': emp.gender,
        
     }
-    
+    if request.method=='POST':
+        print("emp",emp)
+        emp.name=request.form["name"]
+        emp.age=request.form["age"]
+        emp.gender=request.form["gender"]
+        emp.Designation=request.form["designation"]
+
+        try:
+            db.session.commit()
+            return redirect("/")
+        except:
+            return "update Failed"
         
 
     return jsonify({'message': 'Employee updated successfully','emp':emp_data})
