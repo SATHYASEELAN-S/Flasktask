@@ -1,0 +1,62 @@
+body{
+    background-color: rgb(224, 216, 216) !important;
+}
+
+.emp-add{
+border-radius: 20px;
+height: 10%;
+width: 75% !important;
+
+}
+.btn{
+    transition: all 0.4s ease;
+    background-color: rgb(25, 103, 210) !important;
+    color: white;
+    font-weight: bold !important;
+
+}
+.btn:hover {
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(25, 103, 210) !important;
+ 
+}
+label{
+    font-weight: bold !important;
+
+}
+
+.emp-add,.emp-details{
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px !important;
+}
+
+.modal {
+    backdrop-filter: blur(10px); 
+}
+
+.emp-details{
+    width: 75% !important;
+    border-radius: 20px;
+    
+}
+a{
+    text-decoration: none !important;
+}
+
+.table
+{
+    background-color: red !important;
+    border-radius: 20px !important;
+}
+
+
+
+@media (max-width:768px) {
+    .emp-add {
+        width: 100% !important;
+    }
+
+    .emp-details {
+        width: 100% !important;
+    }
+}
+
